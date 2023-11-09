@@ -21,7 +21,7 @@ const compareTimezoneList = computed((): Map<string, Timezone> => {
 })
 
 const onDDLChange = (event: Event): void => {
-  if (!(event.target instanceof HTMLInputElement)) {
+  if (!(event.target instanceof HTMLSelectElement)) {
     return
   }
 
