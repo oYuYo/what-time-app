@@ -1722,14 +1722,6 @@
         "description": "Cayenne, Fortaleza"
       },
       {
-        "code": "SJ",
-        "region": "Svalbard",
-        "timezone": "W. Europe Standard Time",
-        "utc": "(UTC+01:00)",
-        "offset": 1.0,
-        "description": "Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna"
-      },
-      {
         "code": "SZ",
         "region": "Swaziland",
         "timezone": "South Africa Standard Time",
@@ -1906,7 +1898,7 @@
         "description": "Dublin, Edinburgh, Lisbon, London"
       },
       {
-        "code": "US",
+        "code": "US1",
         "region": "United States",
         "timezone": "Mountain Standard Time",
         "utc": "(UTC-07:00)",
@@ -1914,7 +1906,7 @@
         "description": "Mountain Time (US & Canada)"
       },
       {
-        "code": "US",
+        "code": "US2",
         "region": "United States",
         "timezone": "Pacific Standard Time",
         "utc": "(UTC-08:00)",
