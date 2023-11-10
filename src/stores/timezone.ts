@@ -43,11 +43,10 @@ export const useTimezoneStore = defineStore({
     },
     updateTime() {
       const utcTImeList = new Map<string, Timezone>()
+      const t = new Date().getTime()
 
       this.timezoneList.forEach((tz) => {
-        const timeStr = new Date(new Date().getTime() + 60 * 60 * 1000 * tz.offset)
-          .toJSON()
-          .slice(0, 16)
+        const timeStr = new Date(t + 60 * 60 * 1000 * tz.offset).toJSON().slice(0, 16)
 
         const params: {
           code: string

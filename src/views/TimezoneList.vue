@@ -21,7 +21,7 @@ setInterval(
 
 <template>
   <p v-if="isLoading">一覧を表示中...</p>
-  <table v-else>
+  <table v-else data-testid="tz-table">
     <tr>
       <th>Country/Region</th>
       <th>ISO3166</th>

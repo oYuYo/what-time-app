@@ -10,12 +10,12 @@ const onChange = (event: any): void => {
 </script>
 
 <template>
-  <section>
+  <section data-testid="home">
     <div class="desc">
-      <span v-if="selectedTZRadio === 'default'">現在時刻のTimezoneの一覧を表示しています</span>
-      <span v-if="selectedTZRadio === 'custom'"
-        >選択されたTimezoneの日時に基づき、時差を計算します</span
-      >
+      <span v-if="selectedTZRadio === 'default'"> 現在時刻のTimezoneの一覧を表示しています </span>
+      <span v-if="selectedTZRadio === 'custom'" data-testid="InitialInvisibleText">
+        選択されたTimezoneの日時に基づき、時差を計算します
+      </span>
       <div>
         <input
           type="radio"
@@ -26,7 +26,14 @@ const onChange = (event: any): void => {
           checked
         />
         <label for="rd-default"> Default</label>
-        <input type="radio" id="rd-custom" v-on:change="onChange" name="tz-radio" value="custom" />
+        <input
+          type="radio"
+          id="rd-custom"
+          v-on:change="onChange"
+          name="tz-radio"
+          value="custom"
+          data-testid="rdCustomTest"
+        />
         <label for="rd-custom"> Custom</label>
       </div>
     </div>

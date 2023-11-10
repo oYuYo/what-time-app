@@ -51,7 +51,12 @@ const OnCalClick = (): void => {
     <tr>
       <td style="width: 130px"><label for="timezone-ddl">Timezoneの選択</label></td>
       <td>
-        <select id="timezone-ddl" v-model="selectedTimezone.code" v-on:change="onDDLChange">
+        <select
+          id="timezone-ddl"
+          v-model="selectedTimezone.code"
+          v-on:change="onDDLChange"
+          data-testid="test-timezone-ddl"
+        >
           <option selected disabled value="">Timezone List</option>
           <option v-for="[code, timezone] in timezoneList" v-bind:key="code" v-bind:value="code">
             {{ timezone.region }}
@@ -63,7 +68,14 @@ const OnCalClick = (): void => {
   <section class="adj">
     <tr>
       <td style="width: 130px"><label for="datetime-local">日付の選択</label></td>
-      <td><input id="datetime-local" type="datetime-local" v-on:change="onDatetimeChange" /></td>
+      <td>
+        <input
+          id="datetime-local"
+          type="datetime-local"
+          v-on:change="onDatetimeChange"
+          data-testid="test-datetime-local"
+        /><span data-testid="selected-datetime" style="display: none">{{ selectedDatetime }}</span>
+      </td>
     </tr>
   </section>
   <tr>

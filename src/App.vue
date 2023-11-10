@@ -5,13 +5,13 @@ import { RouterLink, RouterView } from 'vue-router'
 <template>
   <header>
     <div class="wrapper">
-      <h1>What Time</h1>
+      <h1 data-testid="title">What Time</h1>
       <nav>
-        <RouterLink to="/" style="text-decoration: none"
-          ><span class="button-green">Home</span></RouterLink
+        <RouterLink to="/" style="text-decoration: none">
+          <span class="button-green">Home</span></RouterLink
         >
-        <RouterLink to="/about" style="text-decoration: none"
-          ><span class="button-orange">About</span></RouterLink
+        <RouterLink to="/about" style="text-decoration: none">
+          <span class="button-orange">About</span></RouterLink
         >
         <a
           href="https://github.com/oYuYo/what-time-app"

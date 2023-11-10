@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="about" data-testid="about">
     <p>このサイトではTimezone 一覧を表示しています</p>
     <p>
       Timezone の一覧は<a

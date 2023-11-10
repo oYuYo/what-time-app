@@ -33,12 +33,14 @@ const open = ref(false)
 </script>
 
 <template>
-  <button class="modal-button" @click="open = true">対象地域の選択</button>
-  <Teleport to="body">
+  <button class="modal-button" @click="open = true" data-testid="modal-button">
+    対象地域の選択
+  </button>
+  <Teleport to="#app">
     <div v-if="open" class="modal">
-      <div class="modal-header">
+      <div class="modal-header" data-testid="modal-header">
         <p style="font-weight: bold">Timezoneを選択してください</p>
-        <button class="close-button" @click="open = false">
+        <button class="close-button" @click="open = false" data-testid="modal-close-button">
           Close&nbsp;
           <svg
             viewBox="0 0 15 15"
@@ -121,5 +123,6 @@ const open = ref(false)
   font-weight: bold;
   background-color: #bde3ff;
   border-bottom-style: solid;
+  cursor: pointer;
 }
 </style>
