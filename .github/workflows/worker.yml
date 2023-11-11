@@ -2,13 +2,14 @@ name: Run Test
 on:
   push:
     branches:
-      - main 
+      - feature/*
   workflow_dispatch:
 jobs:
   run-test:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
+      - run: exit 1
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
