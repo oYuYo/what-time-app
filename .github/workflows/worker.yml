@@ -1,8 +1,7 @@
 name: Run Test
 on:
-  push:
-    branches:
-      - feature/*
+  pull_request:
+    branches: [ "main" ]
   workflow_dispatch:
 jobs:
   run-test:
@@ -10,9 +9,9 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 22
           cache: 'npm'
       - run: | 
           npm ci
